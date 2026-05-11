@@ -1,0 +1,61 @@
+docker build -t mcp-server . 
+
+az acr create   --name acrcodingninja   --resource-group coding_ninja   --sku Basic
+az acr update --name acrcodingninja --admin-enabled true
+az acr login --name acrcodingninja
+
+docker tag mcp-server acrcodingninja.azurecr.io/mcp-server:v1
+docker push acrcodingninja.azurecr.io/mcp-server:v1
+
+
+az monitor log-analytics workspace create \
+  --resource-group coding_ninja \
+  --workspace-name mcp-logs \
+  --location eastus
+
+az containerapp env create \
+  --name my-env \
+  --resource-group coding_ninja \
+  --location eastus \
+  --logs-workspace-id $(az monitor log-analytics workspace show \
+      --resource-group coding_ninja \
+      --workspace-name mcp-logs \
+      --query customerId -o tsv) \
+  --logs-workspace-key $(az monitor log-analytics workspace get-shared-keys \
+      --resource-group coding_ninja \
+      --workspace-name mcp-logs \
+      --query primarySharedKey -o tsv)
+
+
+az containerapp create \
+  --name mcp-server \
+  --resource-group coding_ninja \
+  --environment my-env \
+  --image acrcodingninja.azurecr.io/mcp-server:v1 \
+  --target-port 8000 \
+  --ingress external \
+  --registry-server acrcodingninja.azurecr.io \
+  --cpu 1 \
+  --memory 2Gi
+
+
+az containerapp ingress update \
+  --name mcp-server \
+  --resource-group coding_ninja \
+  --transport http
+
+
+Browse https://mcp-server.yellowmushroom-aecdf378.eastus.azurecontainerapps.io/mcp
+
+** mcpinspector
+
+sudo apt install -y nodejs
+sudo apt install npm
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+npm install -g @modelcontextprotocol/inspector
+npx @modelcontextprotocol/inspector
+
+check for tools in mcp/inspector
+
+
+

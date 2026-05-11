@@ -1,0 +1,161 @@
+{
+  "philosophy": {
+    "name": "Indian Philosophy",
+    "description": "Ancient philosophical traditions that form the foundation of Indian thought",
+    "schools": [
+      {
+        "name": "Vedanta",
+        "period": "800 BCE - Present",
+        "founder": "Adi Shankara",
+        "core_concepts": ["Brahman", "Maya", "Atman", "Self-realization"],
+        "key_texts": ["Upanishads", "Brahma Sutras", "Bhagavad Gita"]
+      },
+      {
+        "name": "Buddhism",
+        "period": "500 BCE - Present",
+        "founder": "Gautama Buddha",
+        "core_concepts": ["Four Noble Truths", "Dharma", "Karma", "Nirvana"],
+        "key_texts": ["Tripitaka", "Sutras"]
+      },
+      {
+        "name": "Jainism",
+        "period": "600 BCE - Present",
+        "founder": "Mahavira",
+        "core_concepts": ["Ahimsa", "Karma", "Asceticism", "Moksha"],
+        "key_texts": ["Agamas"]
+      }
+    ]
+  },
+  "classical_arts": {
+    "name": "Classical Arts of India",
+    "description": "Traditional performing and visual arts that have been refined over centuries",
+    "dance_forms": [
+      {
+        "name": "Bharatanatyam",
+        "origin": "Tamil Nadu",
+        "period": "Ancient times",
+        "characteristics": ["Mudras", "Rasa", "Rhythm", "Narrative"],
+        "temples": ["Chidambaram Nataraja Temple"]
+      },
+      {
+        "name": "Kathak",
+        "origin": "Northern India",
+        "period": "Medieval period",
+        "characteristics": ["Footwork", "Speed", "Improvisation", "Storytelling"],
+        "instruments": ["Tabla", "Sitar", "Sarangi"]
+      },
+      {
+        "name": "Kathakali",
+        "origin": "Kerala",
+        "period": "17th century",
+        "characteristics": ["Elaborate makeup", "Costumes", "Gestures", "Facial expressions"]
+      }
+    ],
+    "music": {
+      "hindustani": "North Indian classical music with ragas and taals",
+      "carnatic": "South Indian classical music with emphasis on devotion"
+    }
+  },
+  "architecture": {
+    "name": "Indian Architecture",
+    "description": "Evolution of architectural styles reflecting cultural and religious influences",
+    "periods": [
+      {
+        "name": "Ancient Period",
+        "era": "3000 BCE - 800 CE",
+        "style": "Vedic and Mauryan architecture",
+        "examples": ["Sanchi Stupa", "Ashoka Pillars"]
+      },
+      {
+        "name": "Medieval Period",
+        "era": "800 - 1200 CE",
+        "style": "Hindu temples and Khajuraho group",
+        "examples": ["Khajuraho Temples", "Brihadeeswarar Temple"]
+      },
+      {
+        "name": "Mughal Period",
+        "era": "1526 - 1857 CE",
+        "style": "Indo-Islamic architecture",
+        "examples": ["Taj Mahal", "Red Fort", "Jama Masjid"]
+      }
+    ]
+  },
+  "festivals": {
+    "name": "Major Indian Festivals",
+    "description": "Religious and cultural celebrations that showcase Indian traditions",
+    "festivals": [
+      {
+        "name": "Diwali",
+        "meaning": "Festival of Lights",
+        "significance": "Victory of light over darkness",
+        "celebrated_by": "Hindus, Sikhs, Buddhists, Jains",
+        "duration": "Five days",
+        "traditions": ["Lighting lamps", "Fireworks", "Sweets", "New clothes"]
+      },
+      {
+        "name": "Holi",
+        "meaning": "Festival of Colors",
+        "significance": "Celebration of spring and new beginnings",
+        "celebrated_by": "Hindus, Sikhs, Buddhists",
+        "duration": "Two days",
+        "traditions": ["Colored powder", "Bonfires", "Family gatherings"]
+      },
+      {
+        "name": "Navaratri",
+        "meaning": "Nine Nights",
+        "significance": "Worship of Goddess Durga",
+        "celebrated_by": "Hindus",
+        "duration": "Nine days",
+        "traditions": ["Garba", "Dandiya", "Fasting", "Prayer"]
+      }
+    ]
+  },
+  "cuisine": {
+    "name": "Indian Cuisine",
+    "description": "Diverse culinary traditions with regional variations",
+    "regional_cuisines": [
+      {
+        "region": "North India",
+        "characteristics": "Wheat-based, rich gravies, tandoori",
+        "popular_dishes": ["Butter Chicken", "Naan", "Biryani", "Samosas"]
+      },
+      {
+        "region": "South India",
+        "characteristics": "Rice-based, coconut, spices",
+        "popular_dishes": ["Dosa", "Idli", "Sambar", "Rasam"]
+      },
+      {
+        "region": "Eastern India",
+        "characteristics": "Fish-based, mustard oil",
+        "popular_dishes": ["Hilsa Fish", "Sandesh", "Luchi"]
+      }
+    ],
+    "spices": ["Turmeric", "Cumin", "Coriander", "Cardamom", "Cloves", "Cinnamon"]
+  },
+  "textiles": {
+    "name": "Indian Textiles and Crafts",
+    "description": "Traditional weaving and textile arts",
+    "crafts": [
+      {
+        "name": "Handloom Weaving",
+        "regions": ["Varanasi", "Kanchipuram", "Odisha"],
+        "products": ["Silk sarees", "Cotton fabrics", "Brocades"]
+      },
+      {
+        "name": "Block Printing",
+        "regions": ["Rajasthan", "Gujarat"],
+        "technique": "Hand-carved wooden blocks with natural dyes"
+      },
+      {
+        "name": "Embroidery",
+        "regions": ["Gujarat", "Rajasthan", "Punjab"],
+        "styles": ["Mirror work", "Zari work", "Thread embroidery"]
+      }
+    ]
+  },
+  "default": {
+    "message": "Welcome to Indian Culture Database",
+    "available_topics": ["philosophy", "classical_arts", "architecture", "festivals", "cuisine", "textiles"],
+    "note": "Use the resource name parameter to access specific topics."
+  }
+}
