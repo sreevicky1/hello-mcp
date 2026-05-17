@@ -22,12 +22,12 @@ def generate_quiz(topic: str, difficulty: str = "easy") -> PromptMessage:
 
 # 3️⃣ Prompt: Summarize learning content
 @mcp.prompt()
-def summarize_notes(notes: str) -> PromptMessage:
+def summarize_notes(notes: str) -> str:
     """Summarizes long notes into a short recap."""
     content = (
         f"Summarize the following notes into 3 bullet points for quick revision:\n\n{notes}"
     )
-    return PromptMessage(role="user", content=TextContent(type="text", text=content))
+    return content
 
 @mcp.tool()
 def list_prompt_capabilities() -> str:
